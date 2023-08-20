@@ -1,7 +1,7 @@
 package baseball;
 import camp.nextstep.edu.missionutils.Console;
 import camp.nextstep.edu.missionutils.Randoms;
-import java.lang.reflect.Array;
+
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
@@ -23,7 +23,7 @@ public class Application {
                 strikeCount = strike(randomNumbers, input);
                 ballCount = ball(randomNumbers, input);
                 notSingCount = notSing(randomNumbers, input);
-                check(strikeCount, ballCount, notSingCount);
+                strike_Ball_NotSinging_Check(strikeCount, ballCount, notSingCount);
             }
             again = reStart();
         }
@@ -56,7 +56,7 @@ public class Application {
         }
         return true;
     }
-    public static void check(int strikeCount, int ballCount, int notSingCount) {
+    public static void strike_Ball_NotSinging_Check(int strikeCount, int ballCount, int notSingCount) {
         String total = "";
         if (ballCount > 0) {
             total += String.valueOf(ballCount) + "볼 ";
